@@ -9,7 +9,7 @@ class Page3B extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text('$name Option A'), 
+          title: Text('$name Option B'), 
           actions: [
             IconButton(
                 //todo: Implement back navigation logic making sure to clean the navigation stack

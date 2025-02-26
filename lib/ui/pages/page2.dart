@@ -36,14 +36,14 @@ class Page2 extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     //todo: Implement navigation to page3a sending the name as a parameter
-                    onPressed: () => null,
+                    onPressed: () => Get.toNamed('/page3a', arguments: {'name': name}),
                     child: const Text(
                       'Option A',
                     ),
                   ),
                   const SizedBox(width: 20),
                   ElevatedButton(
-                      onPressed: () => Get.toNamed("/page3b/?name=$name"),
+                      onPressed: () => Get.toNamed('/page3b', arguments: {'name': name}),
                       child: const Text(
                         'Option B',
                       )),

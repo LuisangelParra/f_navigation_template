@@ -2,9 +2,20 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:f_navigation_template/ui/pages/page1.dart';
+import 'package:f_navigation_template/ui/pages/page2.dart';
+import 'package:f_navigation_template/ui/pages/page3a.dart';
+import 'package:f_navigation_template/ui/pages/page3b.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  final routes = [
+    GetPage(name: '/page1', page: () => const Page1()),
+    GetPage(name: '/page2', page: () => const Page2()),
+    GetPage(name: '/page3a', page: () => const Page3A()),
+    GetPage(name: '/page3b', page: () =>  Page3B()),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +40,8 @@ class MyApp extends StatelessWidget {
       //todo: Implement name routing (initialRoute and getPages parameters)
       // use the name of the page the same as the widget
       // remove the next line
-      home: Scaffold(body: Center(child: Text('It works!'))), // remove this
-      // remove the last line
+      initialRoute: '/page1', // Establecer la ruta inicial
+      getPages: routes, // Definir las rutas disponibles
     );
   }
 }

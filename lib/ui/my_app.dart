@@ -8,11 +8,11 @@ import 'package:f_navigation_template/ui/pages/page3a.dart';
 import 'package:f_navigation_template/ui/pages/page3b.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   final routes = [
     GetPage(name: '/page1', page: () => const Page1()),
-    GetPage(name: '/page2', page: () => const Page2()),
+    GetPage(name: '/page2', page: () => Page2()),
     GetPage(name: '/page3a', page: () => const Page3A()),
     GetPage(name: '/page3b', page: () =>  Page3B()),
   ];
